@@ -1,0 +1,54 @@
+*{
+  font-family: 'Kanit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.carousel-image-1,.carousel-image-2,.carousel-image-3{
+    background-size: cover;
+  }
+  #ourPlace{
+    min-height: 200px;
+    position: relative;
+    background-image: url(/img/DeluxeBungalow/1656828774492.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    background-attachment: fixed;
+  }
+  
+  .dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+  .showcase-text{
+    padding: 8rem;
+  }
+  .showcase-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30rem;
+  }
+  .testimonials{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .testimonials .testimonials-item img{
+    max-widht: 12rem;
+    box-shadow: 0 5px 5px #adb5bd ;
+  }
+  footer{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  @media screen and (max-width: 576px){
+    .showcase-text{
+    padding: 4rem;
+  }
+  .showcase-img{
+    min-height: 15rem;
+  }

@@ -5,8 +5,8 @@
 }
 .carousel-image-1,.carousel-image-2,.carousel-image-3{
     background-size: cover;
-  }
-  #ourPlace{
+}
+#ourPlace{
     min-height: 200px;
     position: relative;
     background-image: url(/img/DeluxeBungalow/1656828774492.jpg);
@@ -15,41 +15,95 @@
     text-align: center;
     color: #fff;
     background-attachment: fixed;
-  }
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
   
-  .dark-overlay{
+.dark-overlay{
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
-  }
-  .showcase-text{
+}
+
+.showcase-text{
     padding: 8rem;
-  }
-  .showcase-img{
+}
+.showcase-img{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 30rem;
-  }
-  .testimonials{
+}
+.testimonials{
     padding-top: 7rem;
     padding-bottom: 7rem;
-  }
-  .testimonials .testimonials-item img{
+}
+.testimonials .testimonials-item img{
     max-width: 12rem;
     box-shadow: 0 5px 5px #adb5bd ;
-  }
-  footer{
+}
+footer{
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-  @media screen and (max-width: 576px){
+}
+@media screen and (max-width: 576px){
     .showcase-text{
     padding: 4rem;
   }
-  .showcase-img{
+.showcase-img{
     min-height: 15rem;
   }
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+#scrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+
+    background: rgba(25, 255, 255, 0.05);
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+#progressbar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(1px);
+}
+#progressbar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to top,#008aff,#00ffe7);
+    filter: blur(3px);
 }

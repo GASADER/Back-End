@@ -4,9 +4,9 @@ const url2 = "kong.dev/package.json"
 const url3 = "kong.dev/package.json"
 const mymodules = require('./modules1.js')
 const fs = require('fs')
-const data = fs.readFileSync('Nodejs/Async/index.js', 'utf-8')
+const data = fs.readFileSync('Nodejs/Sync/myfile/input.txt', 'utf-8')
 const outputText = `${data} \n ไฟล์ถูกเขียนเมื่อ ${new Date}`
-fs.writeFileSync('Nodejs/Async/myfile/output.txt', outputText)
+fs.writeFileSync('Nodejs/Sync/myfile/output.txt', outputText)
 
 function downloading(url) {
   return new Promise(function(resolve, reject) {

@@ -1,0 +1,37 @@
+const connect = true
+const url1 = "kong.dev/package.json"
+const url2 = "kong.dev/package.json"
+const url3 = "kong.dev/package.json"
+const mymodules = require('./modules1.js')
+const fs = require('fs')
+const data = fs.readFileSync('Nodejs/Async/index.js', 'utf-8')
+const outputText = `${data} \n ไฟล์ถูกเขียนเมื่อ ${new Date}`
+fs.writeFileSync('Nodejs/Async/myfile/output.txt', outputText)
+
+function downloading(url) {
+  return new Promise(function(resolve, reject) {
+    console.log(`กำลังโหลดจาก ${url}`)
+    setTimeout(() => {
+      if (connect) {
+        resolve(`โหด ${url}`)
+      }
+      else {
+        reject(`ผิด`)
+      }
+    }, 3000)
+  })
+};
+async function start() {
+  console.log(await downloading(url1))
+  console.log(await downloading(url2))
+  console.log(await downloading(url3))
+}
+
+console.log(mymodules.getCurrentTime())
+console.log(mymodules.add(5, 55))
+console.log(data)
+console.log(outputText)
+
+
+start() 
+ ไฟล์ถูกเขียนเมื่อ Wed Aug 17 2022 11:50:51 GMT+0700 (เวลาอินโดจีน)
